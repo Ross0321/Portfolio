@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto</title>
+<link rel="stylesheet" href="css/style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Angelica
+        </a>
+        
+        
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">About</a>
+            <a href="#contract">Portfolio</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a> 
+        </nav>
+    </header>
+
+<section id="home">
+
+    <h1> Hi, I'm <span>Angelica Dayap</span><br></h1>
+    <h4>Computer Science Student </h4>
+
+</section>
+<section id="services">
+    <div class="about">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/316173949_499985975426123_4090227363440534838_n.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me </h1>
+                <p> I am <span>Angelica Ross Dula Dayap</span> , 22 years old born on the 3rd day of December year 2001. 
+                    Born at St. John The Baptist Medical Center, Parian, Calamba, Laguna. 
+                    I was the second born of my parents Ma. Cecilia Dula Dayap and Rodrigo Bicalan Dayap. 
+                    I have an older sister Rocel Angela Dula Dayap and a younger brother Russel Angelo Dula Dayap. 
+                    I'm a 3rd-year college student who is currently studying for a <span>Bachelor of Science in Computer Science </span> at the City College of Calamba (CCC).</p>
+
+                      <div class="tab">
+                        <button class="tablinks active" id="skills-tab" onclick="openTab(event, 'skills')">Skills</button>
+                          <button class="tablinks" onclick="openTab(event, 'hobbies')">Hobbies</button>
+                          <button class="tablinks" onclick="openTab(event, 'education')">Education</button>
+                      </div>
+                  
+                      <!-- Tab content -->
+                      <div id="skills" class="tabcontent active">
+                        <ul>
+                          <li><span>Singing</span><br>Joined a choir<br>Performed to different places and joined a group singing competition</li>
+                          <li><span>Talkative</span><br>Communicate Effectively<br>. Can have better communication</li>
+                          <li><span>Cleaning/Doing Chores</span><br>Cleaning<br>. Taking care to pets and sewing</li>
+                      </ul>
+                      </div>
+                  
+                      <div id="hobbies" class="tabcontent">
+                        <ul>
+                          <li><span>Watching Movies</span><br>Movies and K-drama</li>
+                          <li><span>Singing</span><br>Listening to music</li>
+                          <li><span>Making Poems</span><br>Spoken word poetry</li>
+                      </ul>
+                      </div>
+                  
+                      <div id="education" class="tabcontent">
+                        <ul>
+                          <li><span>2015</span><br>Jose Rizal Memorial School</li>
+                          <li><span>2018</span><br>Calamba City School for the Arts</li>
+                          <li><span>2021</span><br>Calamba City School for the Arts</li>
+                      </ul>
+                      </div>
+
+                  </div>
+     
+              
+                         
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section id="contract">Portfolio</section>
+
+<div class="about-col-3">
+<img src="img/Train.png">
+<img src="img/School.png">
+<img src="img/Pets.png">
+<img src="img/FE.png">
+<img src="img/APPLE.png">
+<img src="img/movement.png">
+<img src="img/exa.png">
+</div>
+
+<section id="resume">Resume</section>
+<div class="about-col-3">
+  <img src="img/Resume.jpg">
+  </div>
+<section id="contact">Contact</section>
+<div class="about-col-3">
+  <img src="img/Contact.jpg">
+  </div>
+
+    <!-- <div class="social-media">
+        <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+       </div> -->
+
+       <script src="js/main.js"></script>
+ 
+       <script>
+        $('#bologna-list a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+             
+document.addEventListener("DOMContentLoaded", function() {
+  var skillsTab = document.getElementById("skills-tab");
+  if (skillsTab) {
+    skillsTab.click();
+  }
+});
+
+  // JavaScript to handle tab functionality
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+    // Vertically center the tab content
+    var tabContent = document.getElementById(tabName);
+    var rect = tabContent.getBoundingClientRect();
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var topOffset = (window.innerHeight / 2) - (rect.height / 2) + scrollTop;
+    tabContent.style.top = topOffset + "px";
+  }
+
+        
+                  
+       </script>
+</body>
+
+
+</html>
